@@ -19,10 +19,10 @@ namespace ChaosRecipeEnhancer.UI
     /// <summary>
     ///     Interaction logic for App.xaml
     /// </summary>
-    public partial class AppBootstrapper
+    public partial class App
     {
         // TODO: make app single instance
-        public AppBootstrapper()
+        public App()
         {
             SetupUnhandledExceptionHandling();
         }

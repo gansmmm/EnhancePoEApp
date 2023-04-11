@@ -17,8 +17,8 @@ using ChaosRecipeEnhancer.UI.Properties;
 using ChaosRecipeEnhancer.UI.UserControls.SetTrackerOverlayDisplays;
 using Serilog;
 using Application = System.Windows.Application;
-using ContextMenu = System.Windows.Forms.ContextMenu;
-using MenuItem = System.Windows.Forms.MenuItem;
+using ContextMenu = System.Windows.Forms.ContextMenuStrip;
+using MenuItem = System.Windows.Forms.ToolStripMenuItem;
 using MessageBox = System.Windows.MessageBox;
 
 namespace ChaosRecipeEnhancer.UI.View
@@ -420,19 +420,19 @@ namespace ChaosRecipeEnhancer.UI.View
             _checkForUpdatesMenuItem = new MenuItem();
 
             // Initialize contextMenu1
-            _contextMenu.MenuItems.AddRange(new[] { _exitMenuItem, _checkForUpdatesMenuItem });
+            _contextMenu.Items.AddRange(new[] { _exitMenuItem, _checkForUpdatesMenuItem });
 
             // Initialize menuItem1
-            _exitMenuItem.Index = 1;
+            _exitMenuItem.ImageIndex = 1;
             _exitMenuItem.Text = "E&xit";
             _exitMenuItem.Click += ExitMenuItemClick;
 
             // Initialize menuItemUpdate
-            _checkForUpdatesMenuItem.Index = 0;
+            _checkForUpdatesMenuItem.ImageIndex = 0;
             _checkForUpdatesMenuItem.Text = "C&heck for Updates";
             _checkForUpdatesMenuItem.Click += CheckForClick;
 
-            _notifyIcon.ContextMenu = _contextMenu;
+            _notifyIcon.ContextMenuStrip = _contextMenu;
         }
 
         public void RunOverlay()
