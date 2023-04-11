@@ -11,6 +11,18 @@
 		<ApplicationManifest>Properties\app.manifest</ApplicationManifest>
 	</PropertyGroup>
 	<ItemGroup>
+	  <None Remove="Assets\Fonts\Password.ttf" />
+	  <None Remove="Assets\Icons\CREIcon.ico" />
+	  <None Remove="Assets\Images\amulet.png" />
+	  <None Remove="Assets\Images\belt.png" />
+	  <None Remove="Assets\Images\boots.png" />
+	  <None Remove="Assets\Images\chest.png" />
+	  <None Remove="Assets\Images\gloves.png" />
+	  <None Remove="Assets\Images\helmet.png" />
+	  <None Remove="Assets\Images\ring.png" />
+	  <None Remove="Assets\Images\weapon.png" />
+	</ItemGroup>
+	<ItemGroup>
 	  <Page Remove="AppBootstrapper.xaml" />
 	</ItemGroup>
 
@@ -38,6 +50,19 @@
 		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
 		<!--<PackageReference Include="WiX" Version="3.11.2" />-->
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="Assets\Fonts\Password.ttf" />
+	  <Resource Include="Assets\Icons\CREIcon.ico" />
+	  <Resource Include="Assets\Images\amulet.png" />
+	  <Resource Include="Assets\Images\belt.png" />
+	  <Resource Include="Assets\Images\boots.png" />
+	  <Resource Include="Assets\Images\chest.png" />
+	  <Resource Include="Assets\Images\gloves.png" />
+	  <Resource Include="Assets\Images\helmet.png" />
+	  <Resource Include="Assets\Images\ring.png" />
+	  <Resource Include="Assets\Images\weapon.png" />
+	</ItemGroup>
 	<ItemGroup>
 		<Compile Update="Properties\Resources.Designer.cs">
 			<DesignTime>True</DesignTime>
@@ -59,6 +84,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Update="Assets\FilterStyles\InfluencedItemsStyle.txt">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Assets\FilterStyles\NormalItemsStyle.txt">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+		<None Update="Assets\Sounds\FilterChanged.mp3">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
 		<None Update="Properties\Settings.settings">
 			<Generator>SettingsSingleFileGenerator</Generator>
 			<LastGenOutput>Settings.Designer.cs</LastGenOutput>
